@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html style="" class="decks fullscreen mz-js mz-no-touch mz-history mz-rgba mz-backgroundsize mz-opacity mz-cssanimations mz-csstransforms mz-csstransforms3d mz-csstransitions mz-localstorage mz-applicationcache mz-svg mz-fullscreen loaded"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="Firefox%20OS%20Application%20Development:%20Slides_files/ga.js" async="" type="text/javascript"></script><script src="Firefox%20OS%20Application%20Development:%20Slides_files/analytics.js" async="" type="text/javascript"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-5.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"4fd2e9786b","applicationID":"1563900","transactionName":"cApZREQKWl9XFxZQVlAORB9QEFpfQQZLUVZd","queueTime":0,"applicationTime":14,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+		<title>Firefox OS Application Development: Slides</title>
+		<meta name="description" content="Slides">
+		<link rel="stylesheet" href="Firefox%20OS%20Application%20Development:%20Slides_files/slides.css">
+		<link href="Firefox%20OS%20Application%20Development:%20Slides_files/application-58ab4be22aed96d31889cdf8c2a29596.css" media="all" rel="stylesheet" type="text/css">
+		<link href="Firefox%20OS%20Application%20Development:%20Slides_files/deck-2cff16871ac94ec915c425c679208c5a.css" media="all" rel="stylesheet" type="text/css">
+		<script src="Firefox%20OS%20Application%20Development:%20Slides_files/modernizr-811daed07a17f831d04c27f90dcf22dd.js" type="text/javascript"></script>
+		<meta content="authenticity_token" name="csrf-param">
+<meta content="iXcPjalTT+kwHA9dm0Y4waBG90JJhjFgJpxL41d521c=" name="csrf-token">
+		<script type="text/javascript">
+  var analytics=analytics||[];analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);var r=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}},i=["identify","track","trackLink","trackForm","trackClick","trackSubmit","pageview","ab","alias","ready"];for(var s=0;s<i.length;s++)analytics[i[s]]=r(i[s])};
+  analytics.load('8t66f1pnq9');
+</script>
+		<style id="user-css-output" type="text/css"></style>
+	<style type="text/css"></style><style></style></head>
+	<body class="reveal-viewport theme-font-league theme-color-sand-grey">
+		<div data-background-transition="fade" data-transition-speed="default" role="application" class="reveal linear">
+			<div style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.876714);" class="slides">
+				<section style="display: block;" class="present" data-id="e52e1cab2a75235a0dc4aaa981922dfa"><img style="width: 424px;" src="Firefox%20OS%20Application%20Development:%20Slides_files/temptemptemp.png"><br><img style="height: 284px;" src="Firefox%20OS%20Application%20Development:%20Slides_files/submit-app-mktplace.png"><br><div align="center">Intuit,
+ Bangalore&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 22 
+June 2014<br>
+</div>
+<br></section><section style="display: block;" aria-hidden="true" class="future" data-id="d457de4c61291d29411e5e70d4ee996d" hidden=""><h2>OUTLINE</h2>
+<p><br></p>
+<ul>
+<li>Architecture</li>
+<li>Web apps Development</li>
+<li>App Validation</li>
+<li>Simulator Testing</li>
+<li>Publishing Apps</li>
+
+
+</ul></section><section style="display: block;" aria-hidden="true" class="future" data-id="e1d626c7f26adfc56585217e028dbb4b" hidden=""><h2>INTO THE ARCHITECTURE</h2>
+<img style="height: 523px;" src="Firefox%20OS%20Application%20Development:%20Slides_files/componentsflame.jpg"></section><section style="display: none;" aria-hidden="true" class="future" data-id="f9656a9979a0797e80da09a2dd0965b0" hidden=""><img style="width: 934.995px; height: 525.546px; max-height: none; max-width: none;" src="Firefox%20OS%20Application%20Development:%20Slides_files/MDN.jpg"><br>Mozilla Developer Network- developer.mozilla.org<br></section><section style="display: none;" aria-hidden="true" class="future" data-id="462c3fcd2db3b80c4abcd8f6b09bc1f9" hidden=""><p><br></p>
+<ul><li>Web apps are apps built using standard Web technologies. 
+</li></ul>
+<p>They work in any modern Web browser, and can be developed <br>using your favorite tools.</p>
+<p><br></p>
+<div align="justify">
+<ul><li>The Open Web apps project proposes some small additions to existing sites to turn them into apps that run in a rich, fun, and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ powerful computing environment. <br>
+</li></ul>
+<p><br></p>
+<ul><li>These apps run on desktop browsers and mobile devices, and are easier for a user to discover and launch than Web sites.<br>
+</li></ul>
+</div></section><section style="display: none;" aria-hidden="true" class="future" data-id="f02d3d1045938729eb7ea3cfc09c2d52" hidden=""><h2 class="page-title">for Web developers</h2>
+<p><br></p>
+<ol>
+<li>Create the app manifest.</li>
+<li>Serve the manifest with .webapp</li>
+<li>Appify the code.</li>
+<li>Validate the markup.<br>
+</li>
+<li>Simulate the tarball.</li>
+<li>You're DONE!<br>
+</li>
+</ol>
+<p></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="cba835df579b81850b16011eea371ff5" hidden=""><h2>YES! YOU CAN !</h2>
+<ul><li>Reuse any existing web site/app or develop from scratch with <br>open web standards.</li></ul>
+<p><br></p>
+<ul><li>Utilize HTML5 features such as localStorage, oﬄine manifest, <br>IndexedDB and access Web APIs for more options.</li></ul>
+<p><br></p>
+<ul><li>Responsive web design for adapting to varying resolutions and screen orientation.<br>
+</li></ul></section><section style="display: none;" aria-hidden="true" class="future" data-id="ae9b5ac48ff0858ef0436ceb083a001e" hidden=""><h1><br></h1>
+<h1>START WITH THE MANIFEST</h1>
+<p>&lt;ONCE THE CODE IS READY&gt;<br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="0282e812da3922b938b35409f3415503" hidden=""><div align="justify">
+<br>{<br>&nbsp; "name": "My App",<br>&nbsp; "description": "My elevator pitch goes here",<br>&nbsp; "launch_path": "/",<br>&nbsp; "icons": {<br>&nbsp;&nbsp;&nbsp; "128": "/img/icon-128.png"<br>&nbsp; },<br>&nbsp; "developer": {<br>&nbsp;&nbsp;&nbsp; "name": "Your name or organization",<br>&nbsp;&nbsp;&nbsp; "url": "http://your-homepage-here.org"<br>&nbsp; },<br>&nbsp; "default_locale": "en"<br>}<br>
+</div></section><section style="display: none;" aria-hidden="true" class="future" data-id="5a0f966c569e5b33d8562aa87a6eab91" hidden=""><h2>MANIFEST REFERENCE</h2>
+<p><br></p>
+<p><br></p>
+<p><a target="_blank" class="roll" href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest"><span data-title="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest">https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest</span></a><br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="8b33c9aa2e75a63bfa27dc6ac47123d6" hidden=""><h1>deep dive <br>
+</h1>
+<h1>into</h1>
+<h1>"" API ""<br>
+</h1></section><section style="display: none;" aria-hidden="true" class="future" data-id="2f727847ec6be59bd539b51a8c067c38" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/image12.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="94efffbe17befe64f22f389e14190696" hidden=""><p align="center">
+    <font><br></font></p>
+<p align="center"><font>// Telephony object</font>
+    <br>
+    var tel = navigator.mozTelephony;<br><br><br><font>// Check if the phone is muted (read/write property)</font>
+<br>
+    console.log(tel.muted);<br><br><br><font>// Check if the speaker is enabled (read/write property)<br></font>console.log(tel.speakerEnabled);
+
+
+
+</p></section><section style="display: none;" aria-hidden="true" class="future" data-id="334200c5882887639e3e6a2fb550d06f" hidden=""><p><br></p>
+<p><br></p>
+<p><br></p>
+<p>// Place a call<br><br>var cal = tel.dial(“123456789”);</p></section><section style="display: none;" aria-hidden="true" class="future" data-id="deebccf9de7c04edeec4ae4bba4277e8" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/45454.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="b5f88d8d955ec46b2a39d0ec3f371a3a" hidden=""><p>// SMS object<br></p>
+<p>var sms = navigator.mozSMS;<br><br>// Send a message<br>sms.send("123456789", "Hello world!");</p>
+<p><br></p>
+<p><br></p>
+<p>// Recieve a message<br>sms.onreceived = function (event) {</p>
+<p>// Read message<br>console.log(event.message);<br>};<br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="584ee583bb7bb0f86f25de3960414dae" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/mdsmddds.png"><br></section><section style="display: none;" aria-hidden="true" class="future" data-id="f807436c28e82b0c3b5cb2e0b6b135f4" hidden=""><p>// Vibrate for one second<br>navigator.Vibrate(1000);<br></p>
+<p><br></p>
+<p>// Vibration pattern [vibrationTime, pause,…]<br>navigator.Vibrate([200, 100, 200, 100]);<br></p>
+<p><br></p>
+<p>// Vibrate for 5 seconds<br>navigator.Vibrate(5000);<br></p>
+<p><br></p>
+<p>// Turn oﬀ vibration<br>navigator.Vibrate(0);</p></section><section style="display: none;" aria-hidden="true" class="future" data-id="a415725129c577638d581d6f94994fdf" hidden=""><img style="width: 774px;" src="Firefox%20OS%20Application%20Development:%20Slides_files/fewk_nsfk.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="7eb83e60a4affc2691dff283780c4e59" hidden=""><p>var contact = new mozContact();<br>contact.init({name: "Tom"});<br>var request = navigator.mozContacts.save(contact);<br><br><br><br>request.onsuccess = function() {<br>&nbsp;&nbsp; console.log("Success");<br></p>
+<p><br></p>
+<p><br></p>
+<p>request.onerror = function() {<br>&nbsp;console.log("Error")<br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="87d7be6619997a170629b9608ca742b8" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/kkkkkkkkkkk.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="fd85da29e12f8d90edfeaddb3ed6335b" hidden=""><p>// Portrait mode:<br>screen.mozLockOrientation("portrait");<br><br><br>/* <br>&nbsp;&nbsp;&nbsp; Possible values:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "landscape" <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "portrait"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "landscape-primary"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "landscape-secondary"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "portrait-primary"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "portrait-secondary"<br>*/<br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="9cd7c85d11ed36c5b5e7a42ef5170013" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/ejsdbxhsj.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="eae13e0c51231c18a95d6b36589e340f" hidden=""><p><br></p>
+<p><br></p>
+<p>var connection = window.navigator.mozConnection,<br><br><br><br>&nbsp;&nbsp;&nbsp; online = connection.bandwidth &gt; 0,<br><br><br><br>&nbsp;&nbsp;&nbsp; metered = connectrion.metered;<br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="73c08e28559b9b532ea6fc402de26e7e" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/vnjdslnvdsj.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="8f32466bc157cdddaeffa976a4acdb61" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/gnk.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="c01f1d223ddd8b40619b4ab3877ed926" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/njn.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="7d3f9733fe7d17196dd90f57cd201055" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/v.png"><br></section><section style="display: none;" aria-hidden="true" class="future" data-id="975b2fbda48148090676ddafabaa42c3" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/ju.png"></section><section style="display: none;" aria-hidden="true" class="future" data-id="4299b859c304519ab9fbbef0624f8dfe" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/hyhykl.png"><br></section><section style="display: none;" aria-hidden="true" class="future" data-id="6524dcee127e48d97d9f827a04819e12" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/gtgt.png"><br></section><section style="display: none;" aria-hidden="true" class="future" data-id="ea149d829b1b61ad8085171e8df3358f" hidden=""><h1><br></h1>
+<h1>LET'S </h1>
+<h1>SIMULATE IT<br>
+</h1></section><section style="display: none;" aria-hidden="true" class="future" data-id="b2fc8a34bd741947db7b5ee2ee5a9791" hidden=""><img src="Firefox%20OS%20Application%20Development:%20Slides_files/Dev_Tools.jpg">Dev Tools<br></section><section style="display: none;" aria-hidden="true" class="future" data-id="72962a0882afd007ba62ee1edf6ab3fa" hidden=""><h2>REFERENCES</h2>
+<p>Essential Components</p>
+<p><a target="_blank" class="roll" href="http://buildingfirefoxos.com/"><span data-title="http://buildingfirefoxos.com">http://buildingfirefoxos.com</span></a></p>
+<p><br></p>
+<p>Marketplace Intro<br></p>
+<p><a target="_blank" class="roll" href="https://marketplace.firefox.com/developers/"><span data-title="https://marketplace.firefox.com/developers/">https://marketplace.firefox.com/developers/</span></a></p>
+<p><br></p>
+<p>Game Dev<br></p>
+<p><a target="_blank" class="roll" href="https://marketplace.firefox.com/developers/docs/game_apps"><span data-title="https://marketplace.firefox.com/developers/docs/game_apps">https://marketplace.firefox.com/developers/docs/game_apps</span></a></p>
+<p><a target="_blank" href="https://marketplace.firefox.com/developers/docs/game_apps"><br></a></p>
+<p><br></p></section><section style="display: none;" aria-hidden="true" class="future" data-id="d6435c5453d1d789bb57973c4d855614" hidden=""><h2>Design your icon!<br>
+</h2>
+<p>
+<br></p>
+<p>
+<a target="_blank" class="roll" href="http://www.mozilla.org/en-US/styleguide/products/firefoxos/icons/"><span data-title="http://www.mozilla.org/en-US/styleguide/products/firefoxos/icons/">http://www.mozilla.org/en-US/styleguide/products/firefoxos/icons/</span></a>
+</p>
+<p>
+<br></p>
+<p>
+<font color="rgba(153, 0, 255, 0)">
+    <br></font>
+</p>
+<h2>
+    <br>
+</h2>
+<p>
+<a target="_blank" href="http://www.mozilla.org/en-US/styleguide/products/firefoxos/icons/">
+    <br></a>
+</p>
+<p>
+<br></p>
+<p>
+<br></p>
+</section><section style="display: block;" aria-hidden="true" class="future" data-id="7c5c4affaa4119b4186a542ea14f2787" hidden=""><h1><br></h1>
+<h1><br></h1>
+<h1>FIREFOX.COM/OS</h1></section><section style="display: block;" aria-hidden="true" class="future" data-id="aa63661086b8fa8f1a3c3cc62fb6d29c" hidden=""><h2>yet again..</h2>
+<p><br></p>
+<p><br></p>
+<p>I tweet from <a target="_blank" class="roll" href="http://twitter.com/jaipradeesh"><span data-title="@Jaipradeesh">@Jaipradeesh</span></a></p>
+<p>And my e-mail is<br></p>
+<p>jaipradeesh AT gmail DOT com</p>
+<p><br></p></section><section style="display: block;" aria-hidden="true" data-id="4f68df6d3dc9091cf1315e8468af9f34" class="future" hidden=""><h2>QUESTIONS?</h2>
+<p><br></p>
+<p>I would love to answer ;)<br></p></section>
+			</div>
+		<div class="backgrounds"><div data-loaded="true" style="display: block;" class="slide-background present"></div><div data-loaded="true" style="display: block;" class="slide-background future"></div><div data-loaded="true" style="display: block;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div style="display: none;" class="slide-background future"></div><div data-loaded="true" style="display: block;" class="slide-background future"></div><div data-loaded="true" style="display: block;" class="slide-background future"></div><div data-loaded="true" style="display: block;" class="slide-background future"></div></div><div style="display: block;" class="progress"><span style="width: 0px;"></span></div><aside style="display: block;" class="controls"><div class="navigate-left"></div><div class="navigate-right enabled"></div><div class="navigate-up"></div><div class="navigate-down"></div></aside><div class="slide-number"></div><div class="state-background"></div><div class="pause-overlay"></div><div aria-atomic="true" aria-live="polite" id="aria-status-div" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Intuit,
+ Bangalore&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 22 
+June 2014
+
+</div></div>
+
+		
+<script>
+	var SLConfig = {"current_user":{"id":41324,"username":"jaipradeesh","name":"Jai Pradeesh","email":"jaipradeesh@gmail.com","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-yrfav0kNhyI/AAAAAAAAAAI/AAAAAAAAAGs/fRAApSkTNh4/photo.jpg","pro":false,"enterprise":false,"notify_on_receipt":false,"billing_address":null,"registered":true},"deck":{"id":59655,"slug":"appdev","title":"Firefox OS Application Development","description":"","visibility":"all","published_at":"2013-06-20T04:47:40Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/jaipradeesh/adf839/appdev.jpg","view_count":107,"user":{"id":41324,"username":"jaipradeesh","name":"Jai Pradeesh","email":"jaipradeesh@gmail.com","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-yrfav0kNhyI/AAAAAAAAAAI/AAAAAAAAAGs/fRAApSkTNh4/photo.jpg","pro":false,"enterprise":false,"notify_on_receipt":false,"billing_address":null,"registered":true},"background_transition":"fade","transition":"linear","theme_id":null,"theme_font":"league","theme_color":"sand-grey","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":true,"center":false,"should_loop":false,"rtl":false,"access_token":"erBYHQt8b1sU1etbNidvKofczbYr","notes":{}}};
+</script>
+		<script src="Firefox%20OS%20Application%20Development:%20Slides_files/application-7f54b4f22136232eb61ecfd7dc414c2a.js" type="text/javascript"></script><div id="modal"></div><div id="modal-cover"></div><div id="modal-background"></div>
+		<script src="Firefox%20OS%20Application%20Development:%20Slides_files/reveal.js" type="text/javascript"></script>
+		
+
+		  <script>
+    analytics.identify('41324', {
+      name             : 'Jai Pradeesh',
+      email            : 'jaipradeesh@gmail.com',
+    });
+  </script>
+
+	
+<script src="Firefox%20OS%20Application%20Development:%20Slides_files/highlight.js" type="text/javascript"></script><script src="Firefox%20OS%20Application%20Development:%20Slides_files/nr-411.js"></script><script src="Firefox%20OS%20Application%20Development:%20Slides_files/4fd2e9786b" type="text/javascript"></script></body></html>
